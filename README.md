@@ -11,6 +11,10 @@ Convert cologne dataset
 
 Convert Swiss datasets:
 
-    python hafas2gtfs.py input_dir output_dir --mapping=fplan:zugdat,bitfeld:bitfield,bfkoord:koord_geo
+    python hafas2gtfs.py input_dir output_dir --mapping=bfkoord:bfkoord_geo
+
+We use gtfs files from [http://gtfs.geops.ch/](http://gtfs.geops.ch/ "GOPS")
+
+
 
 License: MIT
