@@ -415,8 +415,8 @@ class Hafas2GTFS(object):
         return {
             'stop_id': int(line[:7]),
             'stop_name': line[8:29].strip(),
-            'arrival_time': self.parse_time(line[29:33]),
-            'departure_time': self.parse_time(line[34:38])
+            'arrival_time': self.parse_time(line[31:35]),
+            'departure_time': self.parse_time(line[38:42])
         }
 
     def parse_time(self, time_str):
@@ -450,7 +450,7 @@ class Hafas2GTFS(object):
             return {
                 'start_index': line[6:13],
                 'end_index': line[14:21],
-                'bitfield_number': int(line[22:28]),
+                'bitfield_number': line[22:28].strip(),
             }
         return {}
 
